@@ -1,6 +1,6 @@
 # Dossier de conception - équipe à renseigner
 
-**Membres :** Karelle-koulibaly (projet solo). **Version du dossier / commit :** S1, commit à renseigner après `git commit`.
+**Membres :** Karelle-koulibaly (projet solo). **Version du dossier / commit :** S1, ddb7d47
 **Date de revue :** 17/11/2026. **Relecteur :** à renseigner (revue croisée, tâche 8).
 
 
