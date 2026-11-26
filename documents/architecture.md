@@ -2,6 +2,7 @@
 
 **Membres :** Karelle-koulibaly (projet solo). **Version du dossier / commit :** S1, ddb7d47
 **Date de revue :** 17/11/2026. **Relecteur :** à renseigner (revue croisée, tâche 8).
+commit S2 306aaaa
 
 
 Cette trame se complète dès S1 puis évolue avec les décisions réellement prises.
