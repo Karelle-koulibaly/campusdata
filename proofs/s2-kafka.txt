@@ -1,0 +1,1 @@
+{"filename":"kafka:campus.measurements","rows_total":30,"rows_accepted":24,"rows_rejected":3,"rows_duplicate":3}

@@ -1,0 +1,22 @@
+                                        Table "public.measurements"
+    Column     |           Type           | Collation | Nullable |                 Default                  
+---------------+--------------------------+-----------+----------+------------------------------------------
+ id            | bigint                   |           | not null | nextval('measurements_id_seq'::regclass)
+ dataset_id    | uuid                     |           | not null | 
+ ingestion_id  | uuid                     |           | not null | 
+ room          | character varying(30)    |           | not null | 
+ measured_at   | timestamp with time zone |           | not null | 
+ co2_ppm       | integer                  |           | not null | 
+ temperature_c | numeric(4,1)             |           | not null | 
+ humidity_pct  | numeric(4,1)             |           | not null | 
+Indexes:
+    "measurements_pkey" PRIMARY KEY, btree (id)
+    "uq_measurement" UNIQUE CONSTRAINT, btree (dataset_id, room, measured_at)
+Check constraints:
+    "ck_co2" CHECK (co2_ppm >= 250 AND co2_ppm <= 10000)
+    "ck_humidity" CHECK (humidity_pct >= 0::numeric AND humidity_pct <= 100::numeric)
+    "ck_temperature" CHECK (temperature_c >= '-30'::integer::numeric AND temperature_c <= 60::numeric)
+Foreign-key constraints:
+    "measurements_dataset_id_fkey" FOREIGN KEY (dataset_id) REFERENCES datasets(id) ON DELETE CASCADE
+    "measurements_ingestion_id_fkey" FOREIGN KEY (ingestion_id) REFERENCES ingestions(id) ON DELETE CASCADE
+
